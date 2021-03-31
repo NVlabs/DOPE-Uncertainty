@@ -1,0 +1,28 @@
+{
+    "Corn": {
+        "(score) best frame": "00950.png",
+        "(score) best score": "0.40621089935302734",
+        "(score) add error": "0.13021152805010697",
+        "(GUAPO) best frame": "00800.png",
+        "(GUAPO) best std": "0.09767951619616397",
+        "(GUAPO) add error": "0.047187074820235",
+        "(oracle) best frame": "00500.png",
+        "(oracle) add error": "0.020228135810037583",
+        "(ensemble) best frame": "00550.png",
+        "(ensemble) best disagreement": "0.02144289891031723",
+        "(ensemble) add error": "0.021929903678245162"
+    },
+    "Corn_full": {
+        "(score) best frame": "00300.png",
+        "(score) best score": "0.9252856969833374",
+        "(score) add error": "0.007258942729578717",
+        "(GUAPO) best frame": "00350.png",
+        "(GUAPO) best std": "0.024969876106744414",
+        "(GUAPO) add error": "0.004559672359406814",
+        "(oracle) best frame": "00350.png",
+        "(oracle) add error": "0.004559672359406814",
+        "(ensemble) best frame": "00550.png",
+        "(ensemble) best disagreement": "0.02144289891031723",
+        "(ensemble) add error": "0.03846441313025859"
+    }
+}

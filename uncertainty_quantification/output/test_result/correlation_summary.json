@@ -1,0 +1,24 @@
+{
+    "Corn": {
+        "Corn, Corn_full": "0.9971612393873504",
+        "score": "0.11298701298701298",
+        "GUAPO (loc)": "0.45714285714285713"
+    },
+    "Corn_full": {
+        "Corn, Corn_full": "0.5329577529781631",
+        "score": "0.4090909090909091",
+        "GUAPO (loc)": "0.41298701298701296"
+    },
+    "Total number": "21",
+    "Detected number": {
+        "Corn": "21",
+        "Corn_full": "21"
+    },
+    "Detected/Total": {
+        "Corn": "1.0",
+        "Corn_full": "1.0"
+    },
+    "Ensemble number (two)": {
+        "Corn, Corn_full": "21"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "Corn": {
+        "(score) best frame": "00950.png",
+        "(score) best score": "0.40621089935302734",
+        "(GUAPO) best frame": "00650.png",
+        "(GUAPO) best std": "0.1090997836272403",
+        "(ensemble) best frame": "00550.png",
+        "(ensemble) best disagreement": "0.02144289891031723"
+    },
+    "Corn_full": {
+        "(score) best frame": "00300.png",
+        "(score) best score": "0.9252856969833374",
+        "(GUAPO) best frame": "00350.png",
+        "(GUAPO) best std": "0.02594784636853476",
+        "(ensemble) best frame": "00550.png",
+        "(ensemble) best disagreement": "0.02144289891031723"
+    }
+}

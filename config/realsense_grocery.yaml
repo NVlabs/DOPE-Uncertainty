@@ -1,0 +1,20 @@
+image_width: 1920
+image_height: 1080
+camera_name: grocery_realsense
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [1390.53, 0, 964.957, 0, 1386.99, 522.586, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0, 0, 0, 0, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [964.957, 0, 522.586, 0, 1390.53, 1386.99, 0, 0, 1, 0]

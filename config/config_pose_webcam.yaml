@@ -1,0 +1,328 @@
+topic_camera: "/dope/webcam/image_raw"
+topic_camera_info: "/dope/webcam/camera_info"
+topic_publishing: "dope"
+input_is_rectified: True   # Whether the input image is rectified (strongly suggested!)
+#downscale_height: 544      # if the input image is larger than this, scale it down to this pixel height
+downscale_height: 400      # if the input image is larger than this, scale it down to this pixel height
+padding_added_width: 24   # added zero padding  
+#padding_added_width: 0     # added zero padding  
+padding_added_height: 0    # added zero padding  
+#padding_added_height: 8    # added zero padding  
+
+
+# Comment any of these lines to prevent detection / pose estimation of that object
+weights: {
+    # "cracker":"../weights/cracker_60.pth",
+    # "gelatin":"../weights/gelatin_60.pth",
+    # "meat":"../weights/meat_20.pth",
+    # "mustard":"../weights/mustard_60.pth",
+    # "soup":"../weights/soup_60.pth",        
+    # 'peg_hole': "../weights/peg_box_40.pth",
+    # "sugar":"../weights/sugar_60.pth",
+    # "bleach":"../weights/bleach_28_dr.pth",
+
+    # DOPE 50x50 ARCHITECTURE
+
+    # "AlphabetSoup":"../weights/weights_dope/dope_network/AlphabetSoup.pth", 
+    # "Ketchup":"../weights/weights_dope/dope_network/Ketchup.pth", 
+    # "Pineapple":"../weights/weights_dope/dope_network/Pineapple.pth",
+    # "BBQSauce":"../weights/weights_dope/dope_network/BBQSauce.pth", 
+    # "MacaroniAndCheese":"../weights/weights_dope/dope_network/MacaroniAndCheese.pth", 
+    # "Popcorn":"../weights/weights_dope/dope_network/Popcorn.pth",
+    # "Butter":"../weights/weights_dope/dope_network/Butter.pth", 
+    # "Mayo":"../weights/weights_dope/dope_network/Mayo.pth", 
+    # "Raisins":"../weights/weights_dope/dope_network/Raisins.pth",
+    # "Cherries":"../weights/weights_dope/dope_network/Cherries.pth", 
+    # "Milk":"../weights/weights_dope/dope_network/Milk.pth", 
+    # "SaladDressing":"../weights/weights_dope/dope_network/SaladDressing.pth",
+    # "ChocolatePudding":"../weights/weights_dope/dope_network/ChocolatePudding.pth", 
+    # "Mushrooms":"../weights/weights_dope/dope_network/Mushrooms.pth", 
+    # "Spaghetti":"../weights/weights_dope/dope_network/Spaghetti.pth",
+    # "Cookies":"../weights/weights_dope/dope_network/Cookies.pth", 
+    # "Mustard":"../weights/weights_dope/dope_network/Mustard.pth", 
+    # "TomatoSauce":"../weights/weights_dope/dope_network/TomatoSauce.pth",
+    # "Corn":"../weights/weights_dope/dope_network/Corn.pth", 
+    # "OrangeJuice":"../weights/weights_dope/dope_network/OrangeJuice.pth", 
+    # "Tuna":"../weights/weights_dope/dope_network/Tuna.pth",
+    # "CreamCheese":"../weights/weights_dope/dope_network/CreamCheese.pth", 
+    # "Parmesan":"../weights/weights_dope/dope_network/Parmesan.pth", 
+    # "Yogurt":"../weights/weights_dope/dope_network/Yogurt.pth",
+    # "GranolaBars":"../weights/weights_dope/dope_network/GranolaBars.pth", 
+    # "Peaches":"../weights/weights_dope/dope_network/Peaches.pth",
+    # "GreenBeans":"../weights/weights_dope/dope_network/GreenBeans.pth", 
+    # "PeasAndCarrots":"../weights/weights_dope/dope_network/PeasAndCarrots.pth",    
+
+    # FULL ARCHITECTURE 400x400 output
+
+    # "AlphabetSoup":"../weights/weights_dope/dope_full/full_AlphabetSoup.pth", 
+    # "BBQSauce":"../weights/weights_dope/dope_full/full_BBQSauce.pth", 
+    # "Butter":"../weights/weights_dope/dope_full/full_Butter.pth", 
+    # "Cherries":"../weights/weights_dope/dope_full/full_Cherries.pth", 
+    # "ChocolatePudding":"../weights/weights_dope/dope_full/full_ChocolatePudding.pth", 
+    # "Cookies":"../weights/weights_dope/dope_full/full_Cookies.pth", 
+    # "Corn":"../weights/weights_dope/dope_full/full_Corn.pth", 
+    # "CreamCheese":"../weights/weights_dope/dope_full/full_CreamCheese.pth", 
+    # "GreenBeans":"../weights/weights_dope/dope_full/full_GreenBeans.pth", 
+    # "GranolaBars":"../weights/weights_dope/dope_full/full_GranolaBars.pth", 
+    # "Ketchup_full_1":"../weights/weights_dope/dope_full/full_Ketchup.pth", 
+    # "MacaroniAndCheese":"../weights/weights_dope/dope_full/full_MacaroniAndCheese.pth", 
+    # "Mayo":"../weights/weights_dope/dope_full/full_Mayo.pth", 
+    # "Milk":"../weights/weights_dope/dope_full/full_Milk.pth", 
+    # "Mushrooms":"../weights/weights_dope/dope_full/full_Mushrooms.pth", 
+    # "Mustard":"../weights/weights_dope/dope_full/full_Mustard.pth", 
+    # "Parmesan":"../weights/weights_dope/dope_full/full_Parmesan.pth", 
+    # "PeasAndCarrots":"../weights/weights_dope/dope_full/full_PeasAndCarrots.pth",
+    # "Peaches":"../weights/weights_dope/dope_full/full_Peaches.pth",
+    # "Pineapple":"../weights/weights_dope/dope_full/full_Pineapple.pth",
+    # "Popcorn":"../weights/weights_dope/dope_full/full_Popcorn.pth",
+    # "OrangeJuice":"../weights/weights_dope/dope_full/full_OrangeJuice.pth", 
+    # "Raisins":"../weights/weights_dope/dope_full/full_Raisins.pth",
+    # "SaladDressing":"../weights/weights_dope/dope_full/full_SaladDressing.pth",
+    # "Spaghetti":"../weights/weights_dope/dope_full/full_Spaghetti.pth",
+    # "TomatoSauce":"../weights/weights_dope/dope_full/full_TomatoSauce.pth",
+    # "Tuna":"../weights/weights_dope/dope_full/full_Tuna.pth",
+    # "Yogurt":"../weights/weights_dope/dope_full/full_Yogurt.pth",
+
+    # "Ketchup_full_2":"../weights/weights_dope/dope_drfat_full/Ketchup_full.pth", 
+    # "Ketchup_1":"../weights/weights_dope/dope_network/visii_dr/Ketchup_60.pth", 
+    # "Ketchup_2":"../weights/weights_dope/dope_network/visii_dr/Ketchup_30_dope_public.pth", 
+    # "Ketchup_full_3":"../weights/weights_dope/dope_full/visii_dr/ketchup_60.pth", 
+    
+    # "MacaroniAndCheese_full":"../weights/weights_dope/dope_drfat_full/MacaroniAndCheese_full.pth",
+    # "Corn_full":"../weights/weights_dope/dope_drfat_full/Corn_full.pth", 
+
+    "Ketchup":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Ketchup.pth",
+    "Ketchup_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Ketchup_full.pth",
+    "Ketchup_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/Ketchup_08.pth",
+
+    "Milk":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Milk.pth",
+    "Milk_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Milk_full.pth",
+
+    "Mayo":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Mayo.pth",
+    "Mayo_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Mayo_full.pth",
+    "Mayo_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/Mayo_60.pth",    
+
+    "BBQSauce":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/BBQSauce.pth",    
+    "BBQSauce_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/BBQSauce_full.pth",
+    "BBQSauce_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/BBQSauce_08.pth",    
+
+    "Corn":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Corn.pth",    
+    "Corn_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Corn_full.pth",
+    "Corn_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/Corn_07.pth",    
+
+    "Butter":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Butter.pth",    
+    "Butter_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Butter_full.pth",
+    "Butter_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/Butter_07.pth",    
+
+    "AlphabetSoup":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/AlphabetSoup.pth",    
+    "AlphabetSoup_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/AlphabetSoup_full.pth",
+    "AlphabetSoup_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/AlphabetSoup_60.pth",    
+
+    "ChocolatePudding":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/ChocolatePudding.pth",    
+    "ChocolatePudding_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/ChocolatePudding_full.pth",
+    "ChocolatePudding_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/ChocolatePudding_60.pth", 
+
+    "Mustard":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Mustard.pth",    
+    "Mustard_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Mustard_full.pth",
+    "Mustard_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/Mustard_07.pth",
+
+    "PeasAndCarrots":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/PeasAndCarrots.pth",    
+    "PeasAndCarrots_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/PeasAndCarrots_full.pth",
+    "PeasAndCarrots_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/PeasAndCarrots_07.pth",
+
+    "Cherries":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Cherries.pth",    
+    "Cherries_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Cherries_full.pth",
+
+    "CreamCheese":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/CreamCheese.pth",    
+    "CreamCheese_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/CreamCheese_full.pth",
+    "CreamCheese_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/CreamCheese_07.pth",    
+
+    "Yogurt":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Yogurt.pth",    
+    "Yogurt_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Yogurt_full.pth",
+    "Yogurt_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/Yogurt_07.pth",    
+
+    "Parmesan":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Parmesan.pth",    
+    "Parmesan_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Parmesan_full.pth",
+    "Parmesan_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/Parmesan_07.pth",    
+
+    "GranolaBars":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/GranolaBars.pth",    
+    "GranolaBars_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/GranolaBars_full.pth",
+    "GranolaBars_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/GranolaBars_60.pth",
+
+    "GreenBeans":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/GreenBeans.pth",    
+    "GreenBeans_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/GreenBeans_full.pth",
+    "GreenBeans_visii":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/visii_dr/GreenBeans_07.pth",    
+
+    "Mushrooms":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Mushrooms.pth",    
+    "Mushrooms_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Mushrooms_full.pth",
+
+    "Mustard":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_network/Mustard.pth",    
+    "Mustard_full":"/media/guanya/Guanya\ Shi/NVIDIA/weights_dope/dope_dr_full/Mustard_full.pth",
+}
+
+# Cuboid dimension in cm x,y,z
+dimensions: {
+    "cracker": [16.403600692749023,21.343700408935547,7.179999828338623],
+    "gelatin": [8.918299674987793, 7.311500072479248, 2.9983000755310059],
+    "meat": [10.164673805236816,8.3542995452880859,5.7600898742675781],
+    "mustard": [9.6024150848388672,19.130100250244141,5.824894905090332],
+    "soup": [6.7659378051757813,10.185500144958496,6.771425724029541],
+    "sugar": [9.267730712890625,17.625339508056641,4.5134143829345703],
+    "bleach": [10.267730712890625,26.625339508056641,7.5134143829345703],
+
+    "AlphabetSoup" : [ 8.3555002212524414, 7.1121001243591309, 6.6055998802185059 ], 
+    "Ketchup" : [ 14.860799789428711, 4.3368000984191895, 6.4513998031616211 ], 
+    "Pineapple" : [ 5.7623000144958496, 6.95989990234375, 6.567500114440918 ],
+    "BBQSauce" : [ 14.832900047302246, 4.3478999137878418, 6.4632000923156738 ], 
+    "MacaroniAndCheese" : [ 16.625600814819336, 4.0180997848510742, 12.350899696350098 ], 
+    "Popcorn" : [ 8.4976997375488281, 3.825200080871582, 12.649200439453125 ],
+    "Butter" : [ 5.282599925994873, 2.3935999870300293, 10.330100059509277 ], 
+    "Mayo" : [ 14.790200233459473, 4.1030998229980469, 6.4541001319885254 ], 
+    "Raisins" : [ 12.317500114440918, 3.9751999378204346, 8.5874996185302734 ],
+    # "Cherries" : [ 5.282599925994873, 2.3935999870300293, 10.330100059509277 ], 
+    "Cherries" : [ 5.8038997650146484, 7.0907998085021973, 6.6101999282836914 ],
+    "Milk" : [ 19.035800933837891, 7.326200008392334, 7.2154998779296875 ], 
+    "SaladDressing" : [ 14.744099617004395, 4.3695998191833496, 6.403900146484375 ],
+    "ChocolatePudding" : [ 4.947199821472168, 2.9923000335693359, 8.3498001098632812 ], 
+    "Mushrooms" : [ 3.3322000503540039, 7.079899787902832, 6.5869998931884766 ], 
+    "Spaghetti" : [ 4.9836997985839844, 2.8492999076843262, 24.988100051879883 ],
+    "Cookies" : [ 16.724300384521484, 4.015200138092041, 12.274600028991699 ], 
+    "Mustard" : [ 16.004999160766602, 4.8573999404907227, 6.5132999420166016 ], 
+    "TomatoSauce" : [ 8.2847003936767578, 7.0198001861572266, 6.6469998359680176 ],
+    "Corn" : [ 5.8038997650146484, 7.0907998085021973, 6.6101999282836914 ], 
+    "OrangeJuice" : [ 19.248300552368164, 7.2781000137329102, 7.1582999229431152 ], 
+    "Tuna" : [ 3.2571001052856445, 7.0805997848510742, 6.5837001800537109 ],
+    "CreamCheese" : [ 5.3206000328063965, 2.4230999946594238, 10.359000205993652 ], 
+    "Parmesan" : [ 10.286199569702148, 6.6093001365661621, 7.1117000579833984 ], 
+    "Yogurt" : [ 5.3677000999450684, 6.7961997985839844, 6.7915000915527344 ],
+    "GranolaBars" : [ 12.400600433349609, 3.8738000392913818, 16.53380012512207 ], 
+    "Peaches" : [ 5.7781000137329102, 7.0961999893188477, 6.5925998687744141 ],
+    "GreenBeans" : [ 5.758699893951416, 7.0608000755310059, 6.5732002258300781 ], 
+    "PeasAndCarrots" : [ 5.8512001037597656, 7.0636000633239746, 6.5918002128601074 ], 
+
+    "Ketchup_full_1" : [ 14.860799789428711, 4.3368000984191895, 6.4513998031616211 ], 
+    "Ketchup_full_2" : [ 14.860799789428711, 4.3368000984191895, 6.4513998031616211 ], 
+    "Ketchup_full_3" : [ 14.860799789428711, 4.3368000984191895, 6.4513998031616211 ], 
+    "Ketchup_1" : [ 14.860799789428711, 4.3368000984191895, 6.4513998031616211 ], 
+    "Ketchup_2" : [ 14.860799789428711, 4.3368000984191895, 6.4513998031616211 ], 
+
+    "Corn_full" : [ 5.8038997650146484, 7.0907998085021973, 6.6101999282836914 ], 
+    "MacaroniAndCheese_full" : [ 16.625600814819336, 4.0180997848510742, 12.350899696350098 ],
+    "Milk_full" : [ 19.035800933837891, 7.326200008392334, 7.2154998779296875 ],   
+    "Mayo_full" : [ 14.790200233459473, 4.1030998229980469, 6.4541001319885254 ], 
+}
+
+class_ids: {
+    "cracker"           : 1,
+    "gelatin"           : 2,
+    "meat"              : 3,
+    "mustard"           : 4,
+    "soup"              : 5,
+    "sugar"             : 6,
+    "bleach"            : 7,
+    "peg_hole"          : 8,
+    "AlphabetSoup"      : 9, 
+    "Ketchup"           : 10, 
+    "Pineapple"         : 11,
+    "BBQSauce"          : 12, 
+    "MacaroniAndCheese" : 13, 
+    "Popcorn"           : 14,
+    "Butter"            : 15, 
+    "Mayo"              : 16, 
+    "Raisins"           : 17,
+    "Cherries"          : 18, 
+    "Milk"              : 19, 
+    "SaladDressing"     : 20,
+    "ChocolatePudding"  : 21, 
+    "Mushrooms"         : 22, 
+    "Spaghetti"         : 23,
+    "Cookies"           : 24, 
+    "Mustard"           : 25, 
+    "TomatoSauce"       : 26,
+    "Corn"              : 27, 
+    "OrangeJuice"       : 28, 
+    "Tuna"              : 29,
+    "CreamCheese"       : 20, 
+    "Parmesan"          : 31, 
+    "Yogurt"            : 32,
+    "GranolaBars"       : 33, 
+    "Peaches"           : 34,
+    "GreenBeans"        : 35, 
+    "PeasAndCarrots"    : 36,
+    
+    "Ketchup_full_1"    : 37, 
+    "Ketchup_full_2"    : 38, 
+    "Ketchup_full_3"    : 39, 
+    "Ketchup_1"         : 40, 
+    "Ketchup_2"         : 41,   
+
+    "Corn_full"         : 42,
+    "MacaroniAndCheese_full": 43,
+    "Milk_full": 44,
+    "Mayo_full": 45,
+}
+
+draw_colors: {
+    "cracker": [13, 255, 128],  # green
+    "gelatin": [255, 255, 255],  # while
+    "meat": [0, 104, 255],  # blue
+    "mustard": [217,12, 232],  # magenta
+    "soup": [255, 101, 0],  # orange
+    "sugar": [232, 222, 12],  # yellow
+    "bleach": [232, 222, 12],  # yellow
+    "peg_hole": [232, 222, 12],  # yellow
+    "Ketchup": [232, 222, 12],  # yellow
+    "Corn": [217,12, 232],  # magenta
+    "MacaroniAndCheese": [13, 255, 128],  # green
+    "Ketchup_full_1": [13, 255, 128],
+    "Ketchup_full_2": [217,12, 232],
+    "Ketchup_full_3": [217,12, 232],
+    "Ketchup_1": [13, 255, 128],
+    "Ketchup_2": [217,12, 232],
+    "Corn_full": [13, 255, 128],
+    "MacaroniAndCheese_full": [217,12, 232],
+    "Milk": [217,12, 232],
+    "Milk_full": [13, 255, 128],
+    "Mayo": [217,12, 232],
+    "Mayo_full": [13, 255, 128],    
+}
+
+# optional: provide a transform that is applied to the pose returned by DOPE
+model_transforms: {
+#    "cracker": [[ 0,  0,  1,  0],
+#                [ 0, -1,  0,  0],
+#                [ 1,  0,  0,  0],
+#                [ 0,  0,  0,  1]]
+}
+
+# optional: if you provide a mesh of the object here, a mesh marker will be
+# published for visualization in RViz
+# You can use the nvdu_ycb tool to download the meshes: https://github.com/NVIDIA/Dataset_Utilities#nvdu_ycb
+meshes: {
+#    "cracker": "file://path/to/Dataset_Utilities/nvdu/data/ycb/aligned_cm/003_cracker_box/google_16k/textured.obj",
+#    "gelatin": "file://path/to/Dataset_Utilities/nvdu/data/ycb/aligned_cm/009_gelatin_box/google_16k/textured.obj",
+#    "meat":    "file://path/to/Dataset_Utilities/nvdu/data/ycb/aligned_cm/010_potted_meat_can/google_16k/textured.obj",
+#    "mustard": "file://path/to/Dataset_Utilities/nvdu/data/ycb/aligned_cm/006_mustard_bottle/google_16k/textured.obj",
+#    "soup":    "file://path/to/Dataset_Utilities/nvdu/data/ycb/aligned_cm/005_tomato_soup_can/google_16k/textured.obj",
+#    "sugar":   "file://path/to/Dataset_Utilities/nvdu/data/ycb/aligned_cm/004_sugar_box/google_16k/textured.obj",
+#    "bleach":  "file://path/to/Dataset_Utilities/nvdu/data/ycb/aligned_cm/021_bleach_cleanser/google_16k/textured.obj",
+}
+
+# optional: If the specified meshes are not in meters, provide a scale here (e.g. if the mesh is in centimeters, scale should be 0.01). default scale: 1.0.
+mesh_scales: {
+    "cracker": 0.01,
+    "gelatin": 0.01,
+    "meat":    0.01,
+    "mustard": 0.01,
+    "soup":    0.01,
+    "sugar":   0.01,
+    "bleach":  0.01,
+}
+
+# Config params for DOPE
+thresh_angle: 0.5
+thresh_map: 0.01
+sigma: 3
+thresh_points: 0.1
+run_sampling: True
+show_belief_maps: True
